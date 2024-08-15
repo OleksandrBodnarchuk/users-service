@@ -1,11 +1,19 @@
+server:
+  port: ${PORT:0} # random port
+
 spring:
+  profiles:
+    active: dev
   application:
     name: users
   devtools:
     restart:
       enabled: true
-server:
-  port: 0 # random port
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
 
 eureka:
   client:
@@ -13,3 +21,4 @@ eureka:
       defaultZone: http://localhost:9191/eureka
   instance:
     preferIpAddress: false
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
