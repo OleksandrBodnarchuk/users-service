@@ -1,8 +1,11 @@
 spring:
   application:
     name: users
+  devtools:
+    restart:
+      enabled: true
 server:
-  port: 8080
+  port: 0 # random port
 
 eureka:
   client:
