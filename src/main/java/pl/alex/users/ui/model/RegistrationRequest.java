@@ -5,7 +5,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
-public record UserRegistrationRequest(
+public record RegistrationRequest(
     @NotNull(message = "Name field should not be empty")
     @Size(min = 3, message = "Name should contain minimum 3 characters")
     String name,
