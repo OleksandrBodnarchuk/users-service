@@ -29,6 +29,7 @@ public class WebSecurityConfiguration {
     return http
         .csrf(AbstractHttpConfigurer::disable)
         .authorizeHttpRequests(auth -> {
+              auth.requestMatchers(HttpMethod.GET, "/users/test").permitAll();
               auth.requestMatchers(HttpMethod.POST, "/users/register").permitAll();
               auth.requestMatchers(HttpMethod.POST, "/users/*")
                   .access(new WebExpressionAuthorizationManager(
