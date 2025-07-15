@@ -8,8 +8,8 @@
 		<version>3.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>users-service</groupId>
-	<artifactId>pl.alex.app</artifactId>
+	<groupId>pl.alex.app</groupId>
+	<artifactId>users-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>users-service</name>
 
