@@ -6,9 +6,13 @@ spring:
       enabled: true
 
 server:
-  port: 0
+  port: ${PORT:0}
+  servlet:
+    context-path: /api/v1/users
 
 eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
